@@ -7,6 +7,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     doInventory()
 })
 function doInventory () {
+    let myInventorySelector: Sprite = null
     scene.setBackgroundImage(img`
         ................................................................................................................................................................
         ................................................................................................................................................................
@@ -186,6 +187,7 @@ function doInventory () {
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.InventoryIcon)
     mySabre.setPosition(67, 36)
+    controller.moveSprite(myInventorySelector)
 }
 function doSave () {
 	
